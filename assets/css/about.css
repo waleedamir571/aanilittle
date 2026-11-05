@@ -1,0 +1,120 @@
+/* About page: the same forest, gold and paper palette as the home page. */
+.about-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background: var(--forest-deep);
+    color: var(--cream);
+}
+
+.about-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(90deg, #0a211ef5 10%, #102e2ad9 55%, #102e2a80), url("../images/about/watercolor-wash.jpg") center / cover;
+    background-blend-mode: multiply;
+    opacity: .8;
+}
+
+.about-hero::after {
+    content: "";
+    position: absolute;
+    width: 460px;
+    height: 460px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    top: 140px;
+    right: -190px;
+    pointer-events: none;
+}
+
+.about-hero-inner { padding-block: 150px 112px; }
+.about-breadcrumb { display: flex; gap: 15px; margin-bottom: 42px; font-size: 14px; color: #c4cec1; }
+.about-breadcrumb a:hover { color: var(--gold-light); }
+.about-breadcrumb > span:last-child { color: var(--gold-light); }
+.about-hero .eyebrow { color: var(--gold-light); margin-bottom: 22px; }
+.about-hero h1 { font: 500 clamp(52px, 6.5vw, 96px) / 1.02 var(--serif); letter-spacing: -2.5px; max-width: 1000px; }
+.about-hero h1 em { color: var(--gold-light); font-weight: 400; }
+.about-hero-description { max-width: 650px; margin-top: 28px; color: #d1d9cf; font-size: 18px; line-height: 1.9; }
+.about-hero-links { display: flex; flex-wrap: wrap; gap: 24px 45px; margin-top: 34px; }
+.about-hero-links .text-link { color: var(--gold-light); border-color: var(--line); font-size: 17px; }
+.about-hero-note { position: absolute; bottom: 26px; right: max(60px, calc((100% - 1320px) / 2)); font-size: 14px; letter-spacing: 1px; color: #b5c3b8; }
+
+.about-profile-grid { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: clamp(45px, 7vw, 105px); align-items: start; }
+.about-portrait { margin: 0; position: sticky; top: 120px; }
+.about-photo-frame { padding: 13px; border: 1px solid #af94734a; background: #ebe5d8; }
+.about-photo-frame img { width: 100%; height: auto; }
+.about-portrait figcaption { display: flex; align-items: center; gap: 12px; color: var(--muted); font-size: 14px; line-height: 1.7; margin-top: 20px; }
+.about-portrait .caption-line { width: 24px; height: 1px; background: #a58a5e; flex-shrink: 0; }
+.about-portrait-signature { font: 500 30px / 1.2 var(--serif); margin: 35px 0 0 25px; padding-left: 22px; border-left: 1px solid #af947361; }
+.about-portrait-signature em { color: #8a6b3e; }
+.about-biography .eyebrow { color: #74613e; margin-bottom: 18px; }
+.about-biography h2 { font-size: clamp(46px, 4.6vw, 70px); }
+.about-biography .about-role { text-transform: uppercase; letter-spacing: 1.4px; color: var(--muted); font-size: 14px; margin: 19px 0 30px; }
+.about-biography p { font-size: 17px; line-height: 1.95; color: #4d6056; }
+.about-biography .about-lead { font-size: 21px; line-height: 1.8; color: var(--ink); }
+.about-inline-quote { margin: 26px 0; padding-left: 24px; border-left: 2px solid var(--gold); font: italic 500 38px / 1.2 var(--serif); color: #80603a; }
+.about-biography .about-signoff { margin-top: 24px; color: var(--ink); }
+.about-signoff span { display: block; margin-top: 3px; font: italic 400 38px / 1.3 var(--serif); color: #8a6b3e; }
+.about-profile-link { margin-top: 30px; font-size: 17px; }
+
+.about-quote-band { padding-block: 80px; text-align: center; background: var(--forest); color: var(--cream); position: relative; isolation: isolate; }
+.about-quote-band::before { content: ""; position: absolute; inset: 0; z-index: -1; background: url("../images/about/northwest-coast-map.jpg") center / cover; mix-blend-mode: screen; opacity: .07; }
+.about-quote-icon { width: 34px; height: 34px; fill: none; stroke: var(--gold); stroke-width: 1.1; margin-bottom: 25px; }
+.about-quote-band blockquote { margin: 0; font: 500 clamp(34px, 3.8vw, 57px) / 1.15 var(--serif); letter-spacing: -.7px; }
+.about-quote-band blockquote em { color: var(--gold-light); font-weight: 400; }
+.about-quote-band p { margin-top: 28px; font-size: 16px; color: var(--gold-light); }
+.about-quote-band p span { display: block; font-size: 14px; color: #b5c3b8; margin-top: 3px; }
+.about-artist { background: var(--paper); }
+.about-artist .about-profile-grid { align-items: center; }
+.about-artist .about-photo-frame { background: var(--cream); }
+.about-artist .about-portrait { position: relative; top: auto; }
+
+.about-story-invitation { background: var(--forest-deep); color: var(--cream); padding-block: 85px; overflow: hidden; }
+.about-invitation-inner { display: grid; grid-template-columns: 1.4fr .6fr; gap: 70px; align-items: center; }
+.about-story-invitation .eyebrow { color: var(--gold-light); margin-bottom: 20px; }
+.about-story-invitation h2 { font-size: clamp(40px, 4.3vw, 64px); }
+.about-story-invitation h2 em { color: var(--gold-light); }
+.about-story-invitation p:not(.eyebrow) { color: #c4cec1; max-width: 580px; margin-top: 25px; font-size: 17px; }
+.about-story-invitation .button { margin-top: 30px; font-size: 17px; }
+.about-invitation-book { display: block; max-width: 290px; justify-self: center; transform: rotate(5deg); filter: drop-shadow(12px 20px 18px #0006); }
+.about-invitation-book img { width: 100%; height: auto; }
+
+@media (max-width: 991px) {
+    .about-hero-inner { padding-block: 135px 100px; }
+    .about-hero-note { right: 35px; left: 35px; font-size: 14px; }
+    .about-profile-grid { grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 35px; }
+    .about-biography p { font-size: 16px; }
+    .about-biography .about-lead { font-size: 19px; }
+    .about-portrait-signature { margin-left: 0; font-size: 26px; }
+    .about-invitation-inner { gap: 40px; }
+}
+
+@media (max-width: 767px) {
+    .about-hero-inner { padding-block: 120px 65px; }
+    .about-breadcrumb { margin-bottom: 32px; }
+    .about-hero h1 { font-size: clamp(45px, 10vw, 66px); letter-spacing: -1.3px; }
+    .about-hero .eyebrow { font-size: 14px; letter-spacing: .8px; }
+    .about-hero-description { font-size: 16px; margin-top: 24px; }
+    .about-hero-note { position: static; display: block; padding: 0 22px 25px; font-size: 14px; letter-spacing: .3px; line-height: 1.8; }
+    .about-hero::after { right: -350px; }
+    .about-profile.section-space { padding-block: 65px; }
+    .about-profile-grid { grid-template-columns: minmax(0, 1fr); gap: 45px; }
+    .about-portrait { position: relative; top: auto; }
+    .about-photo-frame { padding: 9px; }
+    .about-portrait-signature { font-size: 28px; margin-top: 25px; }
+    .about-portrait figcaption { gap: 10px; }
+    .about-biography h2 { font-size: 49px; }
+    .about-biography .about-role { font-size: 14px; letter-spacing: .6px; }
+    .about-biography .about-lead { font-size: 20px; }
+    .about-inline-quote { font-size: 33px; padding-left: 16px; }
+    .about-quote-band { padding-block: 60px; }
+    .about-quote-band blockquote { font-size: 36px; }
+    .about-artist .about-portrait { grid-row: 1; }
+    .about-invitation-inner { grid-template-columns: minmax(0, 1fr); gap: 45px; }
+    .about-story-invitation { padding-block: 65px; }
+    .about-story-invitation h2 { font-size: 43px; letter-spacing: -1px; }
+    .about-invitation-book { max-width: 220px; }
+    .about-profile-link { gap: 15px; font-size: 16px; }
+}
